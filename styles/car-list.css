@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+header input[type="text"] {
+    width: 300px;
+    padding: 12px 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+header button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav a {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #444;
+}
+
+#model-selection {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+#model-selection form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#model-selection select {
+    width: 150px;
+    padding: 12px 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#model-selection input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#available-cars {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.car-container {
+  width: 60%;
+  margin: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 3px #ccc;
+  overflow: hidden;
+  display:  flex;
+
+  }
+
+.car-container img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+}
+
+.car-details {
+  padding: 10px;
+}
+
+.car-model {
+  font-weight: bold;
+}
+
+.car-availability, .car-year, .car-price, .car-fuel-type, .car-transmission {
+  font-style: italic;
+}
