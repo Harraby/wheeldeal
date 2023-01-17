@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <script src="js/search.js" > </script>
   <title>Car Rental</title>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
   <link rel="stylesheet" type="text/css" href="styles/car-list.css">
 </head>
 <body>
   <header>
     <nav>
       <a href="home.html">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="signup.html">Sign up</a>
+      <a href="login.html">Log in</a>
     </nav>
     <h1>Car Rental</h1>
-    <form action="/search" method="get">
-      <input type="text" name="q" placeholder="Search">
+    <form action="/search" method="post">
+      <input id="searchInput" oninput="searchElement()" placeholder="Search...">
       <button type="submit">Search</button>
     </form>
   </header>
   <main>
-    <section id="model-selection">
+
+    <!--<section id="model-selection">
       <h2>Model Selection</h2>
       <form>
         <label for="car-make">Car Make:</label>
@@ -37,33 +41,66 @@
         <br>
         <input type="submit" value="Search">
       </form>
-    </section>
+    </section>-->
+
     <section id="available-cars">
-      <h2>Available Cars</h2>
+      <h2>Our Cars</h2>
       <table>
         <thead>
-          <tr>
-            <th>Make</th>
-            <th>Model</th>
-            <th>Year</th>
-            <th>Availability</th>
-            <th>Details</th>
-          </tr>
+
         </thead>
-        <tbody id="car-list">
-		  <div class="car-container" v-for="car in cars">
-		    <img id="car-image" src="src/bmw.jpg" alt="car image">
-		    <div class="car-details">
-		      <h2>Car Model: <span class="car-model">{{ car.model }}</span></h2>
-		      <p>Availability: <span class="car-availability">{{ car.availability }}</span></p>
-		      <p>Year: <span class="car-year">{{ car.year }}</span></p>
-		      <p>Price: <span class="car-price">{{ car.price }}</span></p>
-		      <p>Fuel Type: <span class="car-fuel-type">{{ car.fuel_type }}</span></p>
-		      <p>Transmission: <span class="car-transmission">{{ car.transmission }}</span></p><br>
-		      <a href="reservation.html">Reserve</a>
-		    </div>
-		  </div>
-		</div>
+      <tbody id="car-list">
+      <div class="car-container searchable" v-for="car in cars">
+        <img id="car-image" src="src/bmw.jpg" alt="car image">
+        <div class="car-details">
+          <h2>Car Model: <span class="car-model"> BMW</span></h2>
+          <p>Availability: <span class="car-availability">Available</span></p>
+          <p>Year: <span class="car-year"> Model 2021 </span></p>
+          <p>Price: <span class="car-price">100$ a day</span></p>
+          <p>Fuel Type: <span class="car-fuel-type">Gasoline</span></p>
+          <p>Transmission: <span class="car-transmission">Auto transmission</span></p><br>
+          <a class="main-button" href="reservation.html">Reserve</a>
+          </div>
+    </div>
+    <br>
+    <div class="car-container searchable" v-for="car in cars">
+      <img id="car-image" src="src/mercedes.jpg" alt="car image">
+      <div class="car-details">
+        <h2>Car Model: <span class="car-model">Mercedes</span></h2>
+        <p>Availability: <span class="car-availability">Not available</span></p>
+        <p>Year: <span class="car-year">Model 2021</span></p>
+        <p>Price: <span class="car-price">120$ a day</span></p>
+        <p>Fuel Type: <span class="car-fuel-type">Gasoline</span></p>
+        <p>Transmission: <span class="car-transmission">Auto transmission</span></p><br>
+        <a class="main-button red" href="reservation.html">Reserve</a>
+    </div>
+    </div>
+    <br>
+    <div class="car-container searchable" v-for="car in cars">
+      <img id="car-image" src="src/audi.jpg" alt="car image">
+      <div class="car-details">
+        <h2>Car Model: <span class="car-model">Audi</span></h2>
+        <p>Availability: <span class="car-availability">Available</span></p>
+        <p>Year: <span class="car-year">Model 2020</span></p>
+        <p>Price: <span class="car-price">110 $ a day</span></p>
+        <p>Fuel Type: <span class="car-fuel-type">Gasoline</span></p>
+        <p>Transmission: <span class="car-transmission">Auto transmission</span></p><br>
+        <a class="main-button"  href="reservation.html">Reserve</a>
+      </div>
+      </div>
+      <div class="car-container searchable" v-for="car in cars">
+        <img id="car-image" src="src/toyota.jpg" alt="car image">
+        <div class="car-details">
+          <h2>Car Model: <span class="car-model">Toyota</span></h2>
+          <p>Availability: <span class="car-availability">Available</span></p>
+          <p>Year: <span class="car-year">Model 2021</span></p>
+          <p>Price: <span class="car-price">90$ a day</span></p>
+          <p>Fuel Type: <span class="car-fuel-type">Gasoline</span></p>
+          <p>Transmission: <span class="car-transmission">Auto transmission</span></p><br>
+          <a class="main-button"  href="reservation.html">Reserve</a>
+      </div>
+      </div>
+    
         </tbody>
       </table>
     </section>
