@@ -1,0 +1,40 @@
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a, .main-button {
+  text-decoration: none;
+  color:#FFFAF0;
+   width: 300px;
+    padding: 12px 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color:#006400;
+}
+
+h1 {
+  text-align: center;
+  color:green;
+}
+
+button[type="submit"] .main-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 0.2rem;
+}
