@@ -5,14 +5,15 @@
   <link rel="stylesheet" type="text/css" href="styles/reservation.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
   <script src="js/update-date.js"></script>
+  <script src="js/calculate.js"></script>
 </head>
 <body>
-  
+  <div class="spacing"></div>
   <h1>Car Rental Form</h1>
 
   <h2> ***Chosen car in the previous page*** </h2>
 
-  <form>
+  <form action="payment-success.html" method="post">
     <label for="car-type">Pickup location:</label>
     <select id="car-type" name="car-type">
     <option value="null"></option>
@@ -37,8 +38,8 @@
     <label for="pickup-date">Pickup Date:</label>
     <input type="date" id="pickup-date" name="pickup-date"><br>
 
-    <label for="dropoff-date">Dropoff Date:</label>
-    <input type="date" id="dropoff-date" name="dropoff-date"><br>
+    <label for="dropoff-date">Duration of rent by days:</label>
+    <input id="dropoff" type="number" oninput="calculate()" id="dropoff-date" name="dropoff-date"><br>
 
   <!--  <label for="car-type">Car Type:</label>
     <select id="car-type" name="car-type">
@@ -49,8 +50,11 @@
       <option value="luxury">Luxury</option>
     </select><br> -->
 
-    <input type="submit" value="Submit">
+    <input type="submit" id="submit-btn" value="Submit">
+      <h2>Cost: <span id="result">0</span>$</h2>
   </form>
+  
+
 
 </body>
 </html>

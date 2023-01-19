@@ -1,3 +1,17 @@
+.page {
+
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://images.drive.com.au/driveau/image/upload/c_fill,f_auto,g_auto,h_674,q_auto:eco,w_1200/cms/uploads/7TQp899DRyqXubygY4Tp");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+    margin: 0px;
+}
+
 form {
     width: 300px;
     margin: 0 auto;

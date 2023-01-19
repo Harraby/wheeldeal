@@ -3,6 +3,7 @@ header {
     text-align: center;
 }
 
+
 nav {
   text-align: center;
 }
@@ -18,7 +19,7 @@ nav a, .main-button {
     background-color:#006400;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
   color:green;
 }

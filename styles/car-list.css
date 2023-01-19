@@ -10,6 +10,7 @@ header {
     background-position: center;
 }
 
+
 header h1 {
     margin: 0;
     padding-top: 3rem;
@@ -75,10 +76,12 @@ header button[type="submit"] {
     text-align: center;
 }
 
-.car-list {
+#car-list {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .car-container {
@@ -90,8 +93,8 @@ header button[type="submit"] {
   }
 
 .car-container img {
-  height: auto;
-  max-height: 600px;
+  max-width: 60%;
+  min-height: 320px;
 }
 
 .car-details {
@@ -110,4 +113,8 @@ header button[type="submit"] {
     background-color: red !important;
     cursor: not-allowed;
     pointer-events: none;
+}
+
+#car-image {
+
 }
