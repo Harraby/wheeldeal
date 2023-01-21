@@ -27,7 +27,6 @@ form {
   list-style-type: none;
 }
 
-/** SLIDESHOW **/
 .slideshow,
 .slideshow:after { 
     top: -16px; /*Not sure why I needed this fix*/

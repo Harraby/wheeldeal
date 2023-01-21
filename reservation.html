@@ -10,13 +10,9 @@
 <body>
   <div class="spacing"></div>
   <h1>Car Rental Form</h1>
-
-  <h2> ***Chosen car in the previous page*** </h2>
-
-  <form action="payment-success.html" method="post">
+  <form action="payment.php" method="post">
     <label for="car-type">Pickup location:</label>
-    <select id="car-type" name="car-type">
-    <option value="null"></option>
+    <select required id="car-type" name="car-type">
       <option value="ariana">Ariana</option>
       <option value="ben arous">Ben arous</option>
       <option value="tunis">Tunis</option>
@@ -25,8 +21,7 @@
     </select><br> 
 
   <label for="car-type">Droppoff location:</label>
-    <select id="car-type" name="car-type">
-    <option value="null"></option>
+    <select required id="car-type" name="car-type">
       <option value="ariana">Ariana</option>
       <option value="ben arous">Ben arous</option>
       <option value="tunis">Tunis</option>
@@ -36,20 +31,10 @@
     
 
     <label for="pickup-date">Pickup Date:</label>
-    <input type="date" id="pickup-date" name="pickup-date"><br>
+    <input required type="date" id="pickup-date" name="pickup-date"><br>
 
     <label for="dropoff-date">Duration of rent by days:</label>
-    <input id="dropoff" type="number" oninput="calculate()" id="dropoff-date" name="dropoff-date"><br>
-
-  <!--  <label for="car-type">Car Type:</label>
-    <select id="car-type" name="car-type">
-      <option value="economy">Economy</option>
-      <option value="compact">Compact</option>
-      <option value="mid-size">Mid-size</option>
-      <option value="full-size">Full-size</option>
-      <option value="luxury">Luxury</option>
-    </select><br> -->
-
+    <input required id="dropoff" type="number" oninput="calculate()" id="dropoff-date" name="dropoff-date"><br>
     <input type="submit" id="submit-btn" value="Submit">
       <h2>Cost: <span id="result">0</span>$</h2>
   </form>
