@@ -1,3 +1,12 @@
+<?php
+  session_start();
+
+
+  if(!isset($_SESSION['username'])) {
+    header('location:login.php');
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,26 +24,26 @@
   <li><span></span></li>
   <li><span></span></li>
 </ul>
+
     <header>
       <nav>
-  
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
+        <?php if(!isset($_SESSION['username'])) {echo '<a href="login.php">Login</a>';}
+        else {
+          echo '<a href="logout.php">Logout</a>';
+        } ?>
+        <a href="signup.php">Sign Up</a>
       </nav>
-      
-      <!--<form action="/search" method="get">
-        <input type="text" name="q" placeholder="Search">
-        <button type="submit">Search</button>
-      </form>-->
+
+
     </header>
 
     <main>
-      <h1>Welcome to our website!</h1>
+      <h1>Welcome to our website <?php echo $_SESSION['username']; ?> !</h1>
       <section id="featured">
         
          <nav>
   
-          <a href="car-list.html">See our cars</a>
+          <a href="car-list.php">See our cars</a>
       </nav>
       </section>
     </main>

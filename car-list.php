@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,14 +14,16 @@
 <body>
   <header>
     <nav>
-      <a href="home.html">Home</a>
-      <a href="signup.html">Sign up</a>
-      <a href="login.html">Log in</a>
-    </nav>
+      <a href="index.php">Home</a>
+      <a href="signup.php">Sign up</a>
+              <?php if(!isset($_SESSION['username'])) {echo '<a href="login.php">Login</a>';}
+        else {
+          echo '<a href="logout.php">Logout</a>';
+        } ?>    
+      </nav>
     <h1>Car Rental</h1>
     <form action="/search" method="post">
       <input id="searchInput" oninput="searchElement()" placeholder="Search...">
-      <button type="submit">Search</button>
     </form>
   </header>
   <main>
